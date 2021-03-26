@@ -248,6 +248,12 @@ ul {
   font-size: 14px;
   line-height: 1.71;
 }
+.footer-links:hover,
+.footer-address:hover,
+.footer-links:focus,
+.footer-address:focus {
+  color: var(--hover-focus-color);
+}
 
 .button {
   color: var(--title-color);
@@ -264,6 +270,7 @@ ul {
   padding-top: 6px;
   padding-bottom: 6px;
   border: none;
+  display: inline-block;
 }
 
 .button-list {
@@ -278,15 +285,20 @@ ul {
 .button-list > li:not(:last-child) {
   margin-right: 8px;
 }
-.button:hover {
-  color: var(--complementary-color);
-  background-color: var(--accent-color);
-}
+.button:hover,
 .button:focus {
   color: var(--complementary-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px 0px #000000 25 %;
 }
 
+.filtr-link:hover .item {
+  box-shadow: 1px 4px 6px 0px 0, 0, 0, 0, 16;
+
+  box-shadow: 0px 4px 4px 0px 0, 0, 0, 0, 06;
+
+  box-shadow: 0px 1px 1px 0px 0, 0, 0, 0, 12;
+}
 .button-list-img {
   display: flex;
   flex-wrap: wrap;
@@ -367,6 +379,12 @@ ul {
   line-height: 1.87;
   margin-bottom: 0px;
 }
+
+/* ховер на крточки фильтра */
+.filtr-link:hover .item {
+  box-shadow: 0px 4px 4px 0px 0, 0, 0, 0, 25;
+}
+
 .names-of-team {
   color: var(--title-color);
   font-weight: 500;
@@ -426,6 +444,29 @@ img {
   padding-bottom: 30px;
 }
 
+/* иконки в хедере */
+
+.envelope-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--main-text-color);
+}
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--main-text-color);
+}
+.addres-link:focus .envelope-icon,
+.addres-link:hover .envelope-icon {
+  fill: var(--hover-focus-color);
+}
+
+.addres-link:focus .smartphone-icon,
+.addres-link:hover .smartphone-icon {
+  fill: var(--hover-focus-color);
+}
 /* иконки о нас */
 
 .about-item::before {
@@ -524,3 +565,22 @@ img {
   fill: var(--complementary-color);
   background-color: var(--hover-focus-color);
 }
+/* footer */
+.join-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--complementary-color);
+}
+.footer-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.footer-part:not(:last-child) {
+  margin-right: 70px;
+}
+/* ховер фокус на карточки фильтра */
