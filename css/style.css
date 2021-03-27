@@ -83,6 +83,8 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  padding-top: 32px;
+  padding-bottom: 31px;
 }
 .addres-list :not(:first-child) {
   margin-left: 50px;
@@ -106,6 +108,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 31px;
 }
 
 .link:hover {
@@ -136,6 +140,7 @@ ul {
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
 
   font-weight: 900;
   font-size: 44px;
@@ -397,7 +402,7 @@ ul {
 .position-of-team {
   font-size: 16px;
   line-height: 1.18;
-  margin-bottom: 16px;
+  margin: 0px;
 }
 .conteiner {
   box-sizing: border-box;
@@ -434,6 +439,7 @@ img {
 .card-item {
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
   background-color: var(--complementary-color);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -442,7 +448,7 @@ img {
 }
 .card-item-team {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 /* иконки в хедере */
@@ -548,6 +554,8 @@ img {
 
 .social-list {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .whole-social-icon {
   display: flex;
