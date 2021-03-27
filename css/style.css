@@ -289,16 +289,9 @@ ul {
 .button:focus {
   color: var(--complementary-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px 0px #000000 25 %;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.filtr-link:hover .item {
-  box-shadow: 1px 4px 6px 0px 0, 0, 0, 0, 16;
-
-  box-shadow: 0px 4px 4px 0px 0, 0, 0, 0, 06;
-
-  box-shadow: 0px 1px 1px 0px 0, 0, 0, 0, 12;
-}
 .button-list-img {
   display: flex;
   flex-wrap: wrap;
@@ -307,6 +300,7 @@ ul {
 
   list-style-type: none;
   font-family: inherit;
+  text-decoration: none;
 }
 
 .item {
@@ -378,11 +372,18 @@ ul {
   font-size: 16px;
   line-height: 1.87;
   margin-bottom: 0px;
+  color: var(--main-text-color);
 }
 
-/* ховер на крточки фильтра */
-.filtr-link:hover .item {
-  box-shadow: 0px 4px 4px 0px 0, 0, 0, 0, 25;
+.filtr-link {
+  text-decoration: none;
+}
+
+.filtr-link:hover .whole-card {
+  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
+}
+.filtr-link:focus .whole-card {
+  box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
 }
 
 .names-of-team {
@@ -460,12 +461,12 @@ img {
 }
 .addres-link:focus .envelope-icon,
 .addres-link:hover .envelope-icon {
-  fill: var(--hover-focus-color);
+  fill: var(--accent-color);
 }
 
 .addres-link:focus .smartphone-icon,
 .addres-link:hover .smartphone-icon {
-  fill: var(--hover-focus-color);
+  fill: var(--accent-color);
 }
 /* иконки о нас */
 
@@ -502,37 +503,31 @@ img {
 
 /* иконки клиентов */
 
-.clients-list-item {
-  width: calc(100%-150px / 6);
-}
-.clients-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.client-link {
-  display: flex;
+.client-icon {
+  fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 3px;
-  fill: #afb1b8;
 }
 .clients-list {
   display: flex;
   flex-wrap: nowrap;
 }
-.client-link:hover .client-icon {
-  fill: var(--hover-focus-color);
-  border: 1px solid var(--hover-focus-color);
+.clients-list-item {
+  width: calc(100%-5 * 30 / 6);
 }
-.client-link:focus .client-icon {
-  fill: var(--hover-focus-color);
-  border: 1px solid var(--hover-focus-color);
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link:hover .client-icon {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* иконки соцсети */
 
 .social-icon {
-  width: 20px;
-  height: 20px;
   fill: #afb1b8;
 }
 .social-item {
@@ -554,19 +549,31 @@ img {
 .social-list {
   display: inline-flex;
 }
+.whole-social-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.social-icon-link:hover .whole-social-icon {
+  background-color: var(--accent-color);
+}
+.social-icon-link:hover .social-icon {
+  fill: var(--complementary-color);
+}
 
-.social-icon-link:hover,
-.social-item:hover .social-icon {
-  fill: var(--complementary-color);
-  background-color: var(--hover-focus-color);
+.social-icon-link:focus .whole-social-icon {
+  background-color: var(--accent-color);
 }
-.social-icon-link:focus,
-.social-item:focus .social-icon {
+.social-icon-link:focus .social-icon {
   fill: var(--complementary-color);
-  background-color: var(--hover-focus-color);
 }
+
 /* footer */
-.join-title {
+.footer-part-title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -583,4 +590,6 @@ img {
 .footer-part:not(:last-child) {
   margin-right: 70px;
 }
-/* ховер фокус на карточки фильтра */
+.footer-icon {
+  fill: var(--complementary-color);
+}
