@@ -515,8 +515,7 @@ img {
   border-radius: 3px;
 }
 .clients-list {
-  display: flex;
-  flex-wrap: nowrap;
+  display: inline-flex;
 }
 .clients-list-item {
   width: calc(100%-5 * 30 / 6);
@@ -526,21 +525,30 @@ img {
   margin-right: 30px;
 }
 
+.client-link {
+  display: flex;
+}
+
 .client-link:hover .client-icon {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
-
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 /* иконки соцсети */
 
 .social-icon {
   fill: #afb1b8;
+  justify-content: center;
+  align-items: center;
 }
 .social-item {
   display: inline-flex;
 }
 .social-icon-link {
-  display: inline-flex;
+  display: flex;
   width: 44px;
   height: 44px;
   justify-content: center;
@@ -557,39 +565,30 @@ img {
   justify-content: center;
   align-items: center;
 }
-.whole-social-icon {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+
+.social-icon-team:hover .social-icon {
+  fill: var(--complementary-color);
 }
-.social-icon-link:hover .whole-social-icon {
-  background-color: var(--accent-color);
-}
-.social-icon-link:hover .social-icon {
+.social-icon-team:focus .social-icon {
   fill: var(--complementary-color);
 }
 
-.social-icon-link:focus .whole-social-icon {
+.social-icon-link:hover,
+.social-icon-link:focus {
   background-color: var(--accent-color);
-}
-.social-icon-link:focus .social-icon {
-  fill: var(--complementary-color);
 }
 
 /* footer */
-.footer-part-title {
+
+.footer-title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--complementary-color);
 }
+
 .footer-wrap {
   display: flex;
   flex-wrap: nowrap;
