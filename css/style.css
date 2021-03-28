@@ -488,22 +488,15 @@ img {
 }
 
 .antenna::before {
-  content: '';
   background-image: url(../images/antenna.svg);
 }
 .clock::before {
-  content: '';
-  background-color: var(--buttons-color);
   background-image: url(../images/clock.svg);
 }
 .diagram::before {
-  content: '';
-  background-color: var(--buttons-color);
   background-image: url(../images/diagram.svg);
 }
 .astronaut::before {
-  content: '';
-  background-color: var(--buttons-color);
   background-image: url(../images/astronaut.svg);
 }
 
